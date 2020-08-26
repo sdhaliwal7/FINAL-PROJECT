@@ -10,7 +10,14 @@
 #' @import purrr
 #'
 #' @export
-pluralize_gift <- function(gift){
-    gift <- gift %>% str_subset("[A-z]$") %>% paste("s", sep="")
-    return(gift)
+middhinge <- function(x, na_rm = FALSE) {
+  q1 <- x %>% pull(TotalPay) %>%
+    quantile(.0)
+  q1 <- as.vector(q1)
+  q3 <- x %>% pull(TotalPay) %>% 
+    quantile(c(.75))
+  q3 <- as.vector(q3)
+  mid <- (q1 + q3)/2
+  return(mid)
 }
+
