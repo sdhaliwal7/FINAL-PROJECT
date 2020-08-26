@@ -15,10 +15,13 @@
 #' @import purrr
 #'
 #' @export
-sample_mean <- function(vec, n) {
-  vec <- sample(vec,n)
-  me <- mean(vec)
-  return(me)
+trimmean <- function(x, y) {
+  count_vec <- NROW(x)
+  trim <- (y * count_vec)
+  trim_front <- head(x, -trim)
+  trim_back <- tail(x, -NROW(trim_front))
+  trim_mean <- mean(trim_back)
+  return(trim_mean)
 }
 
 
