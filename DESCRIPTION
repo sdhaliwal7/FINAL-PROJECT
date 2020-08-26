@@ -1,12 +1,12 @@
-Package: twelvedays
-Title: Sing the 12 Days of Christmas
+Package: finalproj
+Title: Final project package
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Kelly",
-           family = "Bodwin",
+    person(given = "Sahib",
+           family = "Dhaliwal",
            role = c("aut", "cre"),
-           email = "kelly@bodwin.us")
-Description: This is a practice package for coursework.
+           email = "sahibd12@gmail.com")
+Description: This is a package to help specialize data to get a better understanding o.
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
@@ -15,7 +15,9 @@ Imports:
     glue,
     stringr,
     magrittr,
-    purrr
+    purrr,
+    tidyverse,
+    inferr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Suggests: 
