@@ -3,7 +3,6 @@
 export("%>%")
 export(midhinge)
 export(trim_mean)
-#export(sing_day)
 import(dplyr)
 import(glue)
 import(purrr)
