@@ -1,9 +1,9 @@
-#' Takes a noun and makes it plural
+#' 
 #'
 #' @param gift A string or vector of strings
 #'
 #' @return A string or vector of strings with the pluralized words
-#'
+#' @import FINAL-PROJECT
 #' @import stringr
 #' @import dplyr
 #' @import glue
@@ -12,7 +12,7 @@
 #' @export
 middhinge <- function(x, na_rm = FALSE) {
   q1 <- x %>%
-    quantile(.0)
+    quantile(c(.025))
   q1 <- as.vector(q1)
   q3 <- x %>% 
     quantile(c(.75))
@@ -20,4 +20,5 @@ middhinge <- function(x, na_rm = FALSE) {
   mid <- (q1 + q3)/2
   return(mid)
 }
+
 
