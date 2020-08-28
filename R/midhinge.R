@@ -11,10 +11,10 @@
 #'
 #' @export
 middhinge <- function(x, na_rm = FALSE) {
-  q1 <- x %>% pull(TotalPay) %>%
+  q1 <- x %>%
     quantile(.0)
   q1 <- as.vector(q1)
-  q3 <- x %>% pull(TotalPay) %>% 
+  q3 <- x %>% 
     quantile(c(.75))
   q3 <- as.vector(q3)
   mid <- (q1 + q3)/2
